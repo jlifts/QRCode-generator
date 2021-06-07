@@ -1,0 +1,36 @@
+#:kivy 2.0.0
+<Root>:
+
+    url: url
+    convert: convert
+
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        padding: 50
+        spacing: 20
+
+        Image:
+            source:'QRLogo.png'
+            keep_ratio: True
+            width: 500
+
+        Label:
+            text: 'URL to PNG in One Click'
+            font_size: 70
+            color: '#54c6aa'
+        TextInput:
+            id: url
+            multiline: False
+            padding_y: 20, 20
+            size_hint: 1, 0.5
+            cursor_color: [0,0,0,1]
+            font_size: 50
+        Button:
+            id: convert
+            on_press: root.generate()
+            text: 'QR It!'
+            font_size: 100
+            size_hint: 1, 0.5
+            bold: True
+            background_color: '#54c6aa'
