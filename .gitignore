@@ -2,3 +2,4 @@
 /.vscode
 __pycache__
 App
+.DS_Store
